@@ -1,20 +1,18 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+These are files and documentation generated during the codecademy Intermediate Python 3 course. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Course Overview
+In Learn Intermediate Python 3, we’ll teach you how to leverage Python’s unique features and techniques to build powerful, sophisticated applications. You’ll also learn how to expedite your data processing and management, manage your resources, test your code using the Unittest testing framework, and more. Here’s an overview of the courses modules:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+* Functions Deep Dive
+* Object-Oriented Programming
+* Iterators & Generators
+* Specialized Collections
+* Resource Management
+* Unit Testing
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Let’s get started!
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+- [Learn Python 3 Cheatsheet](https://www.codecademy.com/learn/learn-python-3/modules/learn-python3-hello-world/cheatsheet)
+- [Learn Intermediate Python 3 Cheatsheet](https://www.codecademy.com/learn/paths/learn-intermediate-python-3/tracks/learn-intermediate-python-3/modules/int-python-function-arguments/cheatsheet)
