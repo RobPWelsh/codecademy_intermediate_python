@@ -124,14 +124,60 @@
 # -------------------------------------------------------------------------------
 # All together
 # Example:
-def print_animals(animal1, animal2, *args, animal4, **kwargs):
-    print(animal1, animal2)
-    print(args)
-    print(animal4)
-    print(kwargs)
+# def print_animals(animal1, animal2, *args, animal4, **kwargs):
+#     print(animal1, animal2)
+#     print(args)
+#     print(animal4)
+#     print(kwargs)
+#
+#
+# print_animals('Snake', 'Fish', 'Guinea Pig', 'Owl', animal4='Cat', animal5='Dog')
+#
+#
+# # Exercise:
+# def single_prix_fixe_order(appetizer, *entrees, sides, **dessert_scoops):
+#     print(appetizer)
+#     print(entrees)
+#     print(sides)
+#     print(dessert_scoops)
+#
+#
+# single_prix_fixe_order('Baby Beets', 'Salmon', 'Scallops', sides='Mashed Potatoes', dessert1='Vanilla', dessert2='Cookies and Cream')
+#
+# # -------------------------------------------------------------------------------
+# # Function call unpacking
+#
+#
+# def calculate_price_per_person(total, tip, split):
+#     total_tip = total * (tip/100)
+#     split_price = (total + total_tip) / split
+#     print(split_price)
+#
+#
+# # Write your code below:
+# table_7_total = [534.50, 20.0, 5]
+# calculate_price_per_person(*table_7_total)
+
+# -------------------------------------------------------------------------------
+# Project - The Nile
+from nile import get_distance, format_price, SHIPPING_PRICES
+from test import test_function
+
+# Define calculate_shipping_cost() here:
 
 
-print_animals('Snake', 'Fish', 'Guinea Pig', 'Owl', animal4='Cat', animal5='Dog')
+# Test the function by calling
+# test_function(calculate_shipping_cost)
 
-# Exercise:
+# Define calculate_driver_cost() here
+
+
+# Test the function by calling
+# test_function(calculate_driver_cost)
+
+# Define calculate_money_made() here
+
+
+# Test the function by calling
+# test_function(calculate_money_made)
 
