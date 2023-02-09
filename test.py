@@ -34,7 +34,6 @@ class Driver:
 driver1 = Driver(4, 10)
 driver2 = Driver(7, 20)
 
-
 def test_driver(f):
     try:
         price, driver = f(80, driver1, driver2)
