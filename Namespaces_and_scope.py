@@ -26,17 +26,17 @@
 #
 # Local namespace
 global_variable = 'global'
-
-
-print(' -- Local and global Namespaces with empty script -- \n')
-# Write Checkpoint 1 here:
-print(locals())
-print(globals())
-
-# Write Checkpoint 2 here:
-def divide(num1, num2):
-    result = num1 / num2
-    print(locals())
+#
+#
+# print(' -- Local and global Namespaces with empty script -- \n')
+# # Write Checkpoint 1 here:
+# print(locals())
+# print(globals())
+#
+# # Write Checkpoint 2 here:
+# def divide(num1, num2):
+#     result = num1 / num2
+#     print(locals())
 
 # Write Checkpoint 3 here:
 # def multiply(num1, num2):
@@ -166,3 +166,5 @@ def divide(num1, num2):
 # print_available('red')
 # for color in paint_gallons_available:
 #     print(color)
+
+
