@@ -218,24 +218,24 @@
 # Project - School Catalogue
 class School:
     def __init__(self, name, level, numberOfStudents):
-        self.name = name
-        self.level = level
-        self.numberOfStudents = numberOfStudents
+        self._name = name
+        self._level = level
+        self._numberOfStudents = numberOfStudents
 
     def get_name(self):
-        return self.name
+        return self._name
 
     def get_level(self):
-        return self.level
+        return self._level
 
     def get_numberOfStudents(self):
-        return self.numberOfStudents
+        return self._numberOfStudents
 
     def set_numberOfStudents(self, numberOfStudents):
-        self.numberOfStudents = numberOfStudents
+        self._numberOfStudents = numberOfStudents
 
     def __repr__(self):
-        return 'A {} school named {} with {} students.'.format(self.level, self.name, self.numberOfStudents)
+        return 'A {} school named {} with {} students.'.format(self._level, self._name, self._numberOfStudents)
 
 
 my_high_school = School('Bloom Carroll', 'High', 125)
@@ -249,13 +249,13 @@ print(my_high_school.get_numberOfStudents())
 class PrimarySchool(School):
     def __init__(self, name, numberOfStudents, pickupPolicy):
         super().__init__(name, 'Primary', numberOfStudents)
-        self.pickupPolicy = pickupPolicy
+        self._pickupPolicy = pickupPolicy
 
     def get_pickupPolicy(self):
-        return self.pickupPolicy
+        return self._pickupPolicy
 
     def __repr__(self):
-        return super().__repr__() + ' The pickup policy is {}'.format(self.pickupPolicy)
+        return super().__repr__() + ' The pickup policy is {}'.format(self._pickupPolicy)
 
 
 my_primary_school = PrimarySchool('Carroll', 66, 'Early')
@@ -267,13 +267,13 @@ print(my_primary_school)
 class HighSchool(School):
     def __init__(self, name, numberOfStudents, sportsTeams):
         super().__init__(name, 'High', numberOfStudents)
-        self.sportsTeams = sportsTeams
+        self._sportsTeams = sportsTeams
 
     def get_sportsTeams(self):
-        return self.sportsTeams
+        return self._sportsTeams
 
     def __repr__(self):
-        return super().__repr__() + ' The sports teams we have are {}'.format(self.sportsTeams)
+        return super().__repr__() + ' The sports teams we have are {}'.format(self._sportsTeams)
 
 
 my_high_school = HighSchool('Bloom Carroll', 125, ['Football', 'Baseball', 'Basketball'])
