@@ -31,8 +31,8 @@ for location, staff in staff.items():
     try:
         print_staff_report(location, staff)
     except ZeroDivisionError as e:
-        print('Could not print sales report for ' + location)
-        print(e)
+        print('Could not print sales report for ' + location)  # Could not print sales report for Melbourne
+        print(e)  # division by zero
 
 # ________________________________________________________________________________
 instrument_prices = {
@@ -58,7 +58,7 @@ try:
 except KeyError:
     print('An invalid instrument was entered!')
 except TypeError:
-    print('Discount percentage must be a number!')
+    print('Discount percentage must be a number!')  # Discount percentage must be a number!
 except Exception:
     print('Hit an exception other than KeyError or TypeError!')
 
@@ -75,7 +75,7 @@ def display_rewards_account(customer):
     try:
         rewards_number = customer_rewards[customer]
     except KeyError:
-        print('Customer was not found in rewards program!')
+        print('Customer was not found in rewards program!')  # Customer was not found in rewards program!
     else:
         print('Rewards account number is: ' + str(rewards_number))
 
@@ -115,17 +115,10 @@ instrument2 = 'Piano'
 quantity2 = 5
 submit_order(instrument2, quantity2)
 
-# ___________________________________________________
-instrument_familes = {
-    'Strings': ['Guitar', 'Banjo', 'Sitar'],
-    'Percussion': ['Conga', 'Cymbal', 'Cajon'],
-    'woodwinds': ['Flute', 'Oboe', 'Clarinet']
-}
-
-
-def print_instrument_families():
-    for family in instrument_familes.keys():
-        print('Some instruments in the ' + family + ' family are ' + str(instrument_familes[family]))
-
-
-print_instrument_families()
+# Outputs:
+# Traceback (most recent call last):
+#   File "C:\Users\Rob\PycharmProjects\codecademy_Intermediate_Python\Exceptions.py", line 116, in <module>
+#     submit_order(instrument2, quantity2)
+#   File "C:\Users\Rob\PycharmProjects\codecademy_Intermediate_Python\Exceptions.py", line 108, in submit_order
+#     raise InventoryError(supply)
+# InventoryError: Available supply is only 3
