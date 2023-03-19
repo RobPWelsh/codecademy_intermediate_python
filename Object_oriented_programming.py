@@ -240,10 +240,13 @@ class School:
 
 my_high_school = School('Bloom Carroll', 'High', 125)
 
-print(my_high_school.get_name())
-print(my_high_school.get_level())
+print(my_high_school.get_name())  # Bloom Carroll
+print(my_high_school.get_level())  # High
+
 my_high_school.set_numberOfStudents(138)
-print(my_high_school.get_numberOfStudents())
+
+print(my_high_school.get_numberOfStudents())  # 138
+print(my_high_school)  # A High school named Bloom Carroll with 138 students.
 
 
 class PrimarySchool(School):
@@ -259,9 +262,10 @@ class PrimarySchool(School):
 
 
 my_primary_school = PrimarySchool('Carroll', 66, 'Early')
-print(my_primary_school.get_name())
-print(my_primary_school.get_pickupPolicy())
-print(my_primary_school)
+
+print(my_primary_school.get_name())  # Carroll
+print(my_primary_school.get_pickupPolicy())  # Early
+print(my_primary_school)  # A Primary school named Carroll with 66 students. The pickup policy is Early
 
 
 class HighSchool(School):
@@ -277,5 +281,8 @@ class HighSchool(School):
 
 
 my_high_school = HighSchool('Bloom Carroll', 125, ['Football', 'Baseball', 'Basketball'])
-print(my_high_school.get_sportsTeams())
-print(my_high_school)
+
+print(my_high_school.get_sportsTeams())  # ['Football', 'Baseball', 'Basketball']
+print(
+    my_high_school)  # A High school named Bloom Carroll with 125 students. The sports teams we have are ['Football', 'Baseball', 'Basketball']
+

@@ -46,27 +46,27 @@
 
 # ______________________________________________________________
 # Generator Methods: send()
-# MAX_STUDENTS = 30
-#
-#
-# def get_student_ids():
-#     student_id = 1
-#     while student_id <= MAX_STUDENTS:
-#         # Write your code below
-#         n = yield student_id
-#         if n is not None:
-#             student_id = n
-#             continue
-#
-#         student_id += 1
-#
-#
-# student_id_generator = get_student_ids()
-# for i in student_id_generator:
-#     # Write your code below
-#     if i == 6:
-#         i = student_id_generator.send(25)
-#     print(i)
+MAX_STUDENTS = 30
+
+
+def get_student_ids():
+    student_id = 1
+    while student_id <= MAX_STUDENTS:
+        # Write your code below
+        n = yield student_id
+        if n is not None:
+            student_id = n
+            continue
+
+        student_id += 1
+
+
+student_id_generator = get_student_ids()
+for i in student_id_generator:
+    # Write your code below
+    if i == 6:
+        i = student_id_generator.send(25)
+    print(i)
 
 
 # ______________________________________________________________
@@ -191,76 +191,76 @@
 
 # ______________________________________________________________
 # Event Coordinator Project
-guests = {}
-
-
-def read_guestlist(file_name):
-    text_file = open(file_name, 'r')
-    while True:
-        line_data = text_file.readline().strip().split(",")
-        if len(line_data) < 2:
-            # If no more lines, close file
-            text_file.close()
-            break
-        name = line_data[0]
-        age = int(line_data[1])
-        guests[name] = age
-        n = yield name
-        if n is not None:
-            name = n[0]
-            age = int(n[1])
-            guests[name] = age
-            yield name
-
-
-guest_names = read_guestlist('guest_list.txt')
-
-for i in range(10):
-    print(next(guest_names))
-
-print(guest_names.send(['Jane', '35']))
-
-for name in guest_names:
-    print(name)
-
-over_21 = (guest + ' ' + str(guests[guest]) for guest in guests if guests[guest] >= 21)
-
-for name_age in over_21:
-    print(name_age)
-
-
-def table_1_generator():
-    for i in range(5):
-        yield 'Chicken', 'Table 1', 'Seat ' + str(i + 1)
-
-
-def table_2_generator():
-    for i in range(5):
-        yield 'Beef', 'Table 2', 'Seat ' + str(i + 1)
-
-
-def table_3_generator():
-    for i in range(5):
-        yield 'Fish', 'Table 3', 'Seat ' + str(i + 1)
-
-
-def all_tables():
-    yield from table_1_generator()
-    yield from table_2_generator()
-    yield from table_3_generator()
-
-
-def assignments(guests, table):
-    for guest in guests:
-        table_list = list(next(table))
-        table_list.insert(0, guest)
-        table_list = tuple(table_list)
-        yield table_list
-
-
-test = assignments(guests, all_tables())
-
-for assignment in test:
-    print(assignment)
+# guests = {}
+#
+#
+# def read_guestlist(file_name):
+#     text_file = open(file_name, 'r')
+#     while True:
+#         line_data = text_file.readline().strip().split(",")
+#         if len(line_data) < 2:
+#             # If no more lines, close file
+#             text_file.close()
+#             break
+#         name = line_data[0]
+#         age = int(line_data[1])
+#         guests[name] = age
+#         n = yield name
+#         if n is not None:
+#             name = n[0]
+#             age = int(n[1])
+#             guests[name] = age
+#             yield name
+#
+#
+# guest_names = read_guestlist('guest_list.txt')
+#
+# for i in range(10):
+#     print(next(guest_names))
+#
+# print(guest_names.send(['Jane', '35']))
+#
+# for name in guest_names:
+#     print(name)
+#
+# over_21 = (guest + ' ' + str(guests[guest]) for guest in guests if guests[guest] >= 21)
+#
+# for name_age in over_21:
+#     print(name_age)
+#
+#
+# def table_1_generator():
+#     for i in range(5):
+#         yield 'Chicken', 'Table 1', 'Seat ' + str(i + 1)
+#
+#
+# def table_2_generator():
+#     for i in range(5):
+#         yield 'Beef', 'Table 2', 'Seat ' + str(i + 1)
+#
+#
+# def table_3_generator():
+#     for i in range(5):
+#         yield 'Fish', 'Table 3', 'Seat ' + str(i + 1)
+#
+#
+# def all_tables():
+#     yield from table_1_generator()
+#     yield from table_2_generator()
+#     yield from table_3_generator()
+#
+#
+# def assignments(guests, table):
+#     for guest in guests:
+#         table_list = list(next(table))
+#         table_list.insert(0, guest)
+#         table_list = tuple(table_list)
+#         yield table_list
+#
+#
+# test = assignments(guests, all_tables())
+#
+# for assignment in test:
+#     print(assignment)
 
 
