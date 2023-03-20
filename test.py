@@ -34,6 +34,7 @@ class Driver:
 driver1 = Driver(4, 10)
 driver2 = Driver(7, 20)
 
+
 def test_driver(f):
     try:
         price, driver = f(80, driver1, driver2)
@@ -78,3 +79,5 @@ def test_money(f):
             "calculate_driver_cost() did not provide correct final price (expected {}, received {})".format(445, money))
         return
     print("OK! calculate_money_made() passes tests")
+
+# minor change to test.py to test working with multiple git remotes.
